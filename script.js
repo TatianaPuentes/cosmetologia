@@ -1,50 +1,22 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f4f4f4;
-}
+function mostrarInfo(producto) {
 
-/* encabezado */
-header {
-    background: pink;
-    text-align: center;
-    padding: 20px;
-}
+    let mensaje = "";
 
-/* contenedor */
-.container {
-    padding: 20px;
-}
+    if(producto === "hidratante"){
+        mensaje = "Sirve para hidratar la piel y evitar la resequedad.";
+    }
 
-/* tarjetas de productos */
-.producto {
-    background: white;
-    margin: 15px auto;
-    padding: 15px;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px gray;
-    text-align: center;
-}
+    else if(producto === "solar"){
+        mensaje = "Sirve para proteger la piel de los rayos del sol.";
+    }
 
-/* botones */
-button {
-    background: hotpink;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
+    else if(producto === "limpiador"){
+        mensaje = "Sirve para eliminar suciedad e impurezas del rostro.";
+    }
 
-button:hover {
-    background: deeppink;
-}
+    else if(producto === "mascarilla"){
+        mensaje = "Sirve para nutrir y mejorar la piel.";
+    }
 
-/* pie */
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
+    document.getElementById(producto).innerHTML = mensaje;
 }
